@@ -1,0 +1,64 @@
+---
+title: "Class-Presentation"
+author: "Kenney Snell"
+date: "December 22, 2017"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+## My New Slide
+
+```{r,comment="",echo=FALSE,fig.align='center',fig.cap="My Awesome Figure"}
+
+plot(mtcars$wt,mtcars$mpg,xlab = "Weight",ylab = "MPG")
+```
+Plain text
+
+*italized text*
+
+**Bold text**
+
+`for (i %in% 1:10)`
+
+
+Some comment
+
+## My title
+
+- Bullet one
+- Bullet two
+
+1. Item a
+2. Item b
+
+### A Top level subheading
+
+#### A second level subheading
+
+
+## R Markdown
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+## Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+
