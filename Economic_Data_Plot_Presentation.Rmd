@@ -1,0 +1,33 @@
+---
+title: "Economic_Data"
+author: "Kenney Snell"
+date: "January 3, 2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Date: January 3, 2018
+## US economic time series
+Description
+    This dataset was produced from US economic time series data available from 
+    http://research.stlouisfed.org/fred2. economics is in "wide" format
+date: Month of data collection
+psavert: personal savings rate, http://research.stlouisfed.org/fred2/series/PSAVERT/
+pce:
+    personal consumption expenditures, in billions of dollars,  
+    http://research.stlouisfed.org/fred2/series/PCE
+unemploy: number of unemployed in thousands, http://research.stlouisfed.org/fred2/series/UNEMPLOY
+uempmed: median duration of unemployment, in weeks, http://research.stlouisfed.org/fred2/series/UEMPMED
+pop: total population, in thousands, http://research.stlouisfed.org/fred2/series/POP
+---
+```{r plot econ,echo=TRUE,message=FALSE}
+library(plotly)
+library(caret)
+data(economics_long)
+set.seed(101)
+plot_ly (x=economics_long$date,y=economics_long$value, color = economics_long$variable)
+```
+---
